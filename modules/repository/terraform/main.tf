@@ -19,3 +19,11 @@ resource "github_branch_default" "default" {
   repository = github_repository.main.name
   branch     = github_branch.main.branch
 }
+
+resource "github_actions_variable" "application_name" {
+
+  repository    = github_repository.main.name
+  variable_name = "APPLICATION_NAME"
+  value         = var.application_name
+
+}

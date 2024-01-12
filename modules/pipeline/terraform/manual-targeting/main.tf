@@ -1,7 +1,6 @@
 
 locals {
   files = [
-    ".gitignore",
     ".github/workflows/terraform-plan.yaml",
     ".github/workflows/terraform-apply.yaml",
     ".github/workflows/terraform-destroy.yaml"
