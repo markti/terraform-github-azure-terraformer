@@ -1,6 +1,6 @@
 
 module "repo" {
   source      = "../../modules/repository/terraform"
-  name        = "terraform-azurerm-vwan"
+  name        = var.name
   commit_user = var.commit_user
 }
