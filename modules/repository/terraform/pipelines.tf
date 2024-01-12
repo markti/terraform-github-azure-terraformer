@@ -1,6 +1,6 @@
 module "terraform_manual" {
 
-  source = "../pipelines/terraform/manual-targeting"
+  source = "../../pipelines/terraform/manual-targeting"
 
   repository  = github_repository.main.name
   branch      = github_branch.main.branch
