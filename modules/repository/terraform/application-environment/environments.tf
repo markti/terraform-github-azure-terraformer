@@ -46,7 +46,7 @@ resource "github_actions_environment_variable" "terraform_working_directory" {
 
 module "azure_credential" {
 
-  source = "../../credential/azure/service-principal"
+  source = "../../../credential/azure/service-principal"
 
   for_each = var.environments
 
@@ -64,7 +64,7 @@ module "azure_credential" {
 
 module "azure_backend" {
 
-  source = "../../backend/azure/blob-storage"
+  source = "../../../backend/azure/blob-storage"
 
   for_each = var.environments
 
