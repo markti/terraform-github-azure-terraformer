@@ -6,7 +6,7 @@ variable "branch" {
 }
 variable "path" {
   type    = string
-  default = "src/terraform"
+  default = "modules/cis/v2.0.0"
 }
 variable "commit_user" {
   type = object({

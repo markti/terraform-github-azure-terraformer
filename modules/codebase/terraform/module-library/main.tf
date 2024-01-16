@@ -2,7 +2,7 @@
 locals {
   files = [
     "main.tf",
-    "terraform.tfvars",
+    "outputs.tf",
     "variables.tf",
     "versions.tf"
   ]
