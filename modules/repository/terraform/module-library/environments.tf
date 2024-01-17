@@ -18,6 +18,7 @@ resource "github_actions_environment_variable" "terraform_version" {
   value         = var.terraform_version
 }
 
+/*
 resource "github_actions_environment_variable" "terraform_working_directory" {
 
   repository    = github_repository.main.name
@@ -26,6 +27,7 @@ resource "github_actions_environment_variable" "terraform_working_directory" {
   value         = module.terraform_simple_codebase.path
 
 }
+*/
 
 module "azure_credential" {
 

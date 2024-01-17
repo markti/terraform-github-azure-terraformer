@@ -4,16 +4,15 @@ variable "repository" {
 variable "branch" {
   type = string
 }
-variable "path" {
-  type    = string
-  default = "modules"
-}
 variable "commit_user" {
   type = object({
     name  = string
     email = string
   })
 }
-variable "module_path" {
+variable module_name {
+  type = string
+}
+variable module_path {
   type = string
 }

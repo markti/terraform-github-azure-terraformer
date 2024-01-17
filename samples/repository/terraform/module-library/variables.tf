@@ -15,3 +15,6 @@ variable "environment" {
     client_secret   = string
   })
 }
+variable "modules" {
+  type = map
+}

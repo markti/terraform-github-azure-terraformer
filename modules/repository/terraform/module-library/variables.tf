@@ -19,3 +19,6 @@ variable "terraform_version" {
   type    = string
   default = "1.6.6"
 }
+variable "modules" {
+  type = map
+}
