@@ -1,35 +1,35 @@
 # Introduction to GitHub - Automate the Automation with Terraform (GH-ATAT)
 
-Welcome to our custom Terraform module, designed to streamline your infrastructure management with a fully integrated end-to-end Terraform pipeline. This module leverages the GitHub provider, offering a seamless setup experience and powerful capabilities. 
+Welcome to our comprehensive Terraform solution, crafted to transform your infrastructure management within Azure. This suite comprises two core repositories: the 'Application-Environment' repository and the 'Module-Library' repository, each tailored to cater to distinct aspects of your infrastructure needs.
 
 ## Key Features:
 
-1. **Automated GitHub Repository Creation**: Upon module execution, a new GitHub repository is automatically created. This repository will host your Azure Terraform codebase, centralizing your infrastructure-as-code (IaC) assets.
+1. **Application-Environment Repository**: This repository is pivotal for provisioning long-lived environments (development, testing, production) within Azure. It features robust pipelines for `plan`, `apply`, and `destroy` operations, empowering you to create, manage, and dismantle your environments as required. 
 
-2. **Simplified Azure Integration**: The module is crafted to work harmoniously with Azure. Just specify your Azure credentials, and the module takes care of the rest, ensuring smooth interaction with Azure services.
+2. **Module-Library Repository**: Designed for the development of new Terraform modules, this repository includes a specialized Terraform test pipeline. It facilitates the testing of your modules, ensuring they meet your standards before integration.
 
-3. **Efficient State Management**: With a focus on reliable state management, our module requires you to provide a configuration for a Blob Storage backend. This ensures your Terraform state is stored securely and is easily accessible for your deployments.
+3. **Automated GitHub Repository Creation**: Upon module execution, a new GitHub repository is automatically created for your Azure Terraform codebase, centralizing your infrastructure-as-code (IaC) assets.
 
-4. **GitHub Actions Integration**: A highlight of this module is the integration of GitHub Actions. We've set up a CI/CD pipeline, complete with a manual trigger feature. This allows you to effortlessly choose an environment and execute `terraform plan`, `apply`, and `destroy` operations, ensuring full control over your deployment lifecycle.
+4. **Simplified Azure Integration**: The module seamlessly interacts with Azure services. Just provide your Azure credentials, and the module takes care of the rest.
+
+5. **Efficient State Management**: The module mandates a configuration for a Blob Storage backend, securing and simplifying access to your Terraform state.
+
+6. **GitHub Actions Integration**: A CI/CD pipeline is integrated with GitHub Actions, featuring manual triggers for environment selection and execution of `terraform plan`, `apply`, and `destroy` operations.
 
 ## Prerequisites:
 
-Before you begin, ensure you have the following:
-
-- **GitHub Personal Access Token**: This is crucial for authenticating and enabling interactions with your GitHub account. 
-- **Azure Credentials**: These are necessary for Azure resources management.
-- **Blob Storage Backend Configuration**: Required for storing your Terraform state.
+- **GitHub Personal Access Token**: Essential for GitHub account interactions.
+- **Azure Credentials**: Necessary for managing Azure resources.
+- **Blob Storage Backend Configuration**: Required for Terraform state storage.
 
 ## Getting Started:
 
-Using this module is a breeze. Follow these simple steps:
+1. **Input Credentials**: Enter your GitHub Token, Azure credentials, and Blob Storage Backend configuration into the module.
 
-1. **Provide Necessary Credentials**: Input your GitHub Personal Access Token, Azure credentials, and Blob Storage Backend configuration into the module.
+2. **Execute `terraform apply`**: This sets up your GitHub repository, Azure Terraform codebase, and GitHub Actions pipeline.
 
-2. **Run `terraform apply`**: With your credentials in place, simply run `terraform apply`. This initiates the automated process of setting up your GitHub repository and configuring the Azure Terraform codebase and the GitHub Actions pipeline.
+3. **Trigger Your Pipeline**: Use the manual trigger in GitHub Actions to manage deployments across different environments.
 
-3. **Trigger Your Pipeline**: Once set up, use the manual trigger in the GitHub Actions to select an environment and manage your deployments with `plan`, `apply`, and `destroy` commands.
+4. **Streamlined Infrastructure Management**: Enjoy a unified, efficient approach to managing your Azure infrastructure.
 
-4. **Enjoy Simplified Infrastructure Management**: With everything in place, you're now set to manage your infrastructure with ease, all from a single, integrated pipeline.
-
-Thank you for choosing our Terraform module. We're excited to be a part of your infrastructure automation journey!
+Thank you for choosing our Terraform solution. We're thrilled to support your infrastructure automation journey!
