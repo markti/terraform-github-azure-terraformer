@@ -38,12 +38,15 @@
 In your Terraform configuration file (`main.tf`), the module block will reference these variables as follows:
 
 ```
-module "repo" {
-  source      = "../../../../modules/repository/terraform/module-library"
+module "azure-terraformer" {
+  source  = "markti/azure-terraformer/github//modules/repository/terraform/module-library"
+  version = "1.0.1"
+
   name        = var.name
   commit_user = var.commit_user
   environment = var.environment
   modules     = var.modules
+
 }
 ```
 

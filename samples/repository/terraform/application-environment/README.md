@@ -39,11 +39,15 @@ The module declaration in your Terraform configuration (`main.tf`) should refere
 
 ```hcl
 module "repo" {
-  source           = "../../../../modules/repository/terraform/application-environment"
+  
+  source  = "markti/azure-terraformer/github//modules/repository/terraform/application-environment"
+  version = "1.0.1"
+
   application_name = "aztflab"
   name             = var.name
   commit_user      = var.commit_user
   environments     = var.environments
+
 }
 ```
 
