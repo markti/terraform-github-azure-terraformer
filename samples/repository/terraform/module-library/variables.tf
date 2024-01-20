@@ -7,14 +7,6 @@ variable "commit_user" {
     email = string
   })
 }
-variable "environment" {
-  type = object({
-    subscription_id = string
-    tenant_id       = string
-    client_id       = string
-    client_secret   = string
-  })
-}
 variable "modules" {
-  type = map
+  type = map(any)
 }
