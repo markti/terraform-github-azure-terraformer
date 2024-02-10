@@ -9,3 +9,7 @@ terraform {
 
 # Configure the GitHub Provider
 provider "github" {}
+
+provider "azurerm" {
+  features {}
+}

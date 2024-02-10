@@ -3,3 +3,4 @@
 **/.terraform/*
 **/.debug.sh
 **/.debug.tfvars
+**/.debug*.tfvars

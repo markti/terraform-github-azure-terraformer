@@ -15,11 +15,5 @@ variable "environments" {
     client_id       = string
     client_secret   = string
 
-    backend = object({
-      resource_group_name  = string
-      storage_account_name = string
-      container_name       = string
-    })
-
   }))
 }
