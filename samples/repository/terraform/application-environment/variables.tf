@@ -8,12 +8,5 @@ variable "commit_user" {
   })
 }
 variable "environments" {
-  type = map(object({
-
-    subscription_id = string
-    tenant_id       = string
-    client_id       = string
-    client_secret   = string
-
-  }))
+  type = map(string)
 }
