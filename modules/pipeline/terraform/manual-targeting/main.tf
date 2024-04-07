@@ -3,7 +3,8 @@ locals {
   files = [
     ".github/workflows/terraform-plan.yaml",
     ".github/workflows/terraform-apply.yaml",
-    ".github/workflows/terraform-destroy.yaml"
+    ".github/workflows/terraform-destroy.yaml",
+    ".github/workflows/terraform-plan-labeled-dev.yaml"
   ]
 }
 
