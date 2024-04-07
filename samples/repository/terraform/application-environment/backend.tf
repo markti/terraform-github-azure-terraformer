@@ -22,7 +22,7 @@ module "backend_dev" {
 
   source   = "markti/azure-terraformer/azurerm//modules/terraform/backend/baseline"
   version  = "1.0.16"
-  location = "westus3"
+  location = var.location
 }
 
 module "backend_prod" {
@@ -33,7 +33,7 @@ module "backend_prod" {
 
   source   = "markti/azure-terraformer/azurerm//modules/terraform/backend/baseline"
   version  = "1.0.16"
-  location = "westus3"
+  location = var.location
 }
 
 locals {

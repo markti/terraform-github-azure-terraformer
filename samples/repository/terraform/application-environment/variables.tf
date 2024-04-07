@@ -10,3 +10,6 @@ variable "commit_user" {
 variable "environments" {
   type = map(string)
 }
+variable "location" {
+  type = string
+}

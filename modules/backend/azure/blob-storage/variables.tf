@@ -25,3 +25,7 @@ variable "container_name_label" {
   type    = string
   default = "BACKEND_STORAGE_CONTAINER_NAME"
 }
+variable "location" {
+  type    = string
+  default = "westus3"
+}
