@@ -8,8 +8,9 @@ env:
   TERRAFORM_VERSION: "1.5.7"
 
 jobs:
-  terraform-plan:
+  build:
     runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'stage')
 
     environment:
       name: dev
