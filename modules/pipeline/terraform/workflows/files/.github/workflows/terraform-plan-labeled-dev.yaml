@@ -1,4 +1,4 @@
-name: Terraform-Plan
+name: Terraform-Plan-Labeled-Dev
 
 on:
   pull_request:
