@@ -1,7 +1,7 @@
 variable "application_name" {
   type = string
 }
-variable "name" {
+variable "repo_name" {
   type = string
 }
 variable "commit_user" {

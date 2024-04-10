@@ -4,13 +4,13 @@ module "sp" {
 
   for_each = var.environments
 
-  source  = "markti/azure-terraformer/azuread//modules/service-principal"
-  version = "1.0.1"
-  name    = "sp-terraform-${random_string.main.result}"
-
+  #source  = "markti/azure-terraformer/azuread//modules/service-principal"
+  #version = "1.0.1"
+  source = "../../../../modules/terraform/service-principal"
+  name   = "sp-terraform-${var.application_name}-${each.key}-${random_string.main[each.key].result}"
 }
 
-data azurerm_subscription "main" {
+data "azurerm_subscription" "main" {
 
   for_each = var.environments
 
@@ -21,7 +21,7 @@ data azurerm_subscription "main" {
 resource "azurerm_role_assignment" "main" {
 
   for_each = var.environments
-  
+
   scope                = data.azurerm_subscription.main[each.key].id
   role_definition_name = "Contributor"
   principal_id         = module.sp[each.key].service_principal.object_id

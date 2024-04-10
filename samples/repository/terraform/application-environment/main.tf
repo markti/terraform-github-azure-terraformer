@@ -2,9 +2,10 @@ data "azurerm_client_config" "current" {
 }
 
 resource "random_string" "main" {
-  length  = 8
-  upper   = false
-  special = false
+  for_each = var.environments
+  length   = 8
+  upper    = false
+  special  = false
 }
 
 locals {
@@ -21,8 +22,8 @@ locals {
 
 module "repo" {
   source           = "../../../../modules/repository/terraform/application-environment"
-  application_name = "aztflab"
-  name             = var.name
+  application_name = var.application_name
+  repo_name        = var.repo_name
   commit_user      = var.commit_user
   environments     = local.extended_environments
 }

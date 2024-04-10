@@ -3,8 +3,8 @@ data "github_user" "current" {
 }
 
 resource "github_repository" "main" {
-  name        = var.name
-  description = "My awesome codebase"
+  name        = var.repo_name
+  description = "My awesome codebase for ${var.application_name}"
 
   visibility = "public"
   auto_init  = true

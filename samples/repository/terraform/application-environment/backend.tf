@@ -14,15 +14,19 @@ provider "azurerm" {
   features {}
 }
 
+
+
+
 module "backend_dev" {
 
   providers = {
     azurerm = azurerm.dev
   }
 
-  source   = "markti/azure-terraformer/azurerm//modules/terraform/backend/baseline"
-  version  = "1.0.16"
-  location = var.location
+  source           = "../../../../modules/terraform/backend/baseline"
+  location         = var.location
+  application_name = var.application_name
+  environment      = "dev"
 }
 
 module "backend_prod" {
@@ -31,10 +35,35 @@ module "backend_prod" {
     azurerm = azurerm.prod
   }
 
-  source   = "markti/azure-terraformer/azurerm//modules/terraform/backend/baseline"
-  version  = "1.0.16"
-  location = var.location
+  source           = "../../../../modules/terraform/backend/baseline"
+  location         = var.location
+  application_name = var.application_name
+  environment      = "prod"
 }
+
+# module "backend_dev" {
+
+#   providers = {
+#     azurerm = azurerm.dev
+#   }
+
+#   source   = "markti/azure-terraformer/azurerm//modules/terraform/backend/baseline"
+#   version  = "1.0.16"
+#   location = var.location
+
+# }
+
+# module "backend_prod" {
+
+#   providers = {
+#     azurerm = azurerm.prod
+#   }
+
+#   source   = "markti/azure-terraformer/azurerm//modules/terraform/backend/baseline"
+#   version  = "1.0.16"
+#   location = var.location
+
+# }
 
 locals {
   backends = {
