@@ -2,10 +2,9 @@ data "azurerm_client_config" "current" {
 }
 
 resource "random_string" "main" {
-  for_each = var.environments
-  length   = 8
-  upper    = false
-  special  = false
+  length  = 8
+  upper   = false
+  special = false
 }
 
 locals {
