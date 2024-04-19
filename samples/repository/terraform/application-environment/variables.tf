@@ -17,5 +17,6 @@ variable "application_name" {
   type = string
 }
 variable "visibility" {
-  type = string
+  type        = string
+  description = "Whether the repository should be public or private"
 }
