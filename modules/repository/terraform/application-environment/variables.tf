@@ -10,6 +10,10 @@ variable "commit_user" {
     email = string
   })
 }
+variable "visibility" {
+  type    = string
+  default = "public"
+}
 variable "environments" {
   type = map(object({
 

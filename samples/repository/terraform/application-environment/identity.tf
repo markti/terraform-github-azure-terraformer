@@ -7,7 +7,7 @@ module "sp" {
   #source  = "markti/azure-terraformer/azuread//modules/service-principal"
   #version = "1.0.1"
   source = "../../../../modules/terraform/service-principal"
-  name   = "sp-terraform-${var.application_name}-${each.key}-${random_string.main[each.key].result}"
+  name   = "sp-terraform-${var.application_name}-${each.key}-${random_string.main.result}"
 }
 
 data "azurerm_subscription" "main" {

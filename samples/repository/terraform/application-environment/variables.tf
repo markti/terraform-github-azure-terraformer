@@ -16,3 +16,6 @@ variable "location" {
 variable "application_name" {
   type = string
 }
+variable "visibility" {
+  type = string
+}

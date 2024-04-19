@@ -25,6 +25,7 @@ module "repo" {
   repo_name        = var.repo_name
   commit_user      = var.commit_user
   environments     = local.extended_environments
+  visibility       = var.visibility
 }
 
 /*
