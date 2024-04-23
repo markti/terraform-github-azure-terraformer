@@ -6,7 +6,7 @@ resource "github_repository" "main" {
   name        = var.repo_name
   description = "My awesome codebase for ${var.application_name}"
 
-  visibility = "public"
+  visibility = var.visibility
   auto_init  = true
 }
 
