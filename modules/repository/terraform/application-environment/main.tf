@@ -1,6 +1,4 @@
-data "github_user" "current" {
-  username = ""
-}
+
 
 resource "github_repository" "main" {
   name        = var.name
