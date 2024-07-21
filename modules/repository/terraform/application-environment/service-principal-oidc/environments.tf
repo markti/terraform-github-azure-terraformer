@@ -46,7 +46,7 @@ resource "github_actions_environment_variable" "terraform_working_directory" {
 
 module "azure_credential" {
 
-  source = "../../../credential/azure/service-principal"
+  source = "../../../../credential/azure/service-principal-oidc"
 
   for_each = var.environments
 
@@ -55,16 +55,14 @@ module "azure_credential" {
   subscription_id = each.value.subscription_id
   tenant_id       = each.value.tenant_id
   client_id       = each.value.client_id
-  client_secret   = each.value.client_secret
 
-  client_id_label     = "TERRAFORM_ARM_CLIENT_ID"
-  client_secret_label = "TERRAFORM_ARM_CLIENT_SECRET"
+  client_id_label = "TERRAFORM_ARM_CLIENT_ID"
 
 }
 
 module "azure_backend" {
 
-  source = "../../../backend/azure/blob-storage"
+  source = "../../../../backend/azure/blob-storage"
 
   for_each = var.environments
 

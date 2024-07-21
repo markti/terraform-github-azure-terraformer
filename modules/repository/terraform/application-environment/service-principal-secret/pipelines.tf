@@ -1,6 +1,6 @@
-module "terraform_simple_codebase" {
+module "terraform_manual" {
 
-  source = "../../../codebase/terraform/application-environment"
+  source = "../../../../pipeline/terraform/manual-targeting/service-principal-secret"
 
   repository  = github_repository.main.name
   branch      = github_branch.main.branch
